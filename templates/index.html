@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Cost of Living Comparison</title>
+</head>
+<body>
+    <h1>Compare Cost of Living Between Two Cities</h1>
+    <form id="comparisonForm">
+        <label for="city1">First City:</label>
+        <input type="text" id="city1" name="city1" required>
+
+        <label for="city2">Second City:</label>
+        <input type="text" id="city2" name="city2" required>
+
+        <h2>Expenses for First City</h2>
+        <label for="rent">Rent:</label>
+        <input type="number" id="rent" name="rent" required>
+
+        <label for="fitness">Fitness:</label>
+        <input type="number" id="fitness" name="fitness" required>
+
+        <label for="food">Food:</label>
+        <input type="number" id="food" name="food" required>
+
+        <label for="clothes">Clothes:</label>
+        <input type="number" id="clothes" name="clothes" required>
+
+        <label for="transport">Transport:</label>
+        <input type="number" id="transport" name="transport" required>
+
+        <label for="debts">Debts:</label>
+        <input type="number" id="debts" name="debts" required>
+
+        <label for="luxuries">Everyday Luxuries:</label>
+        <input type="number" id="luxuries" name="luxuries" required>
+
+        <button type="submit">Compare</button>
+    </form>
+    <div id="result"></div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

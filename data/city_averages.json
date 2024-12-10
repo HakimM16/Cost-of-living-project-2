@@ -1,0 +1,38 @@
+{
+    "Paris": {
+        "rent": 1200,
+        "fitness": 50,
+        "food": 300,
+        "clothes": 150,
+        "transport": 100,
+        "debts": 200,
+        "luxuries": 200
+    },
+    "Munich": {
+        "rent": 1000,
+        "fitness": 40,
+        "food": 250,
+        "clothes": 120,
+        "transport": 90,
+        "debts": 180,
+        "luxuries": 180
+    },
+    "New York": {
+        "rent": 2000,
+        "fitness": 70,
+        "food": 400,
+        "clothes": 200,
+        "transport": 150,
+        "debts": 250,
+        "luxuries": 300
+    },
+    "Tokyo": {
+        "rent": 1500,
+        "fitness": 60,
+        "food": 350,
+        "clothes": 180,
+        "transport": 120,
+        "debts": 220,
+        "luxuries": 250
+    }
+}
