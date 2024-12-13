@@ -62,3 +62,25 @@ document.getElementById("comparisonForm").addEventListener("submit", async (even
         document.getElementById("result").innerText = "Error: " + result.error;
     }
 });
+
+/* dropdown function */
+const input = document.getElementById('city2');
+const dropdown = document.getElementById('city2-list');
+
+input.addEventListener('click', function() {
+  dropdown.style.display = 'block';
+});
+
+dropdown.addEventListener('click', function(e) {
+  if (e.target && e.target.matches('.city-option')) {
+    input.value = e.target.innerText;
+    dropdown.style.display = 'none';
+  }
+});
+
+document.addEventListener('click', function(event) {
+  if (!input.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+

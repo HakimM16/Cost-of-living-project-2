@@ -1,63 +1,147 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    background-color: #081b29;  /* Main dark blue */
+    color: #fff; /* Text color set to white for contrast */
 }
 
+/* Dropdown function */
+.dropdown-content {
+    position: absolute;
+    background-color: #26374c;
+    border: 1px solid #00abf0;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1;
+    display: none;
+  }
+  
+  .city-option {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .city-option:hover {
+    background-color: #00abf0;
+  }
+  
+
+/* Header */
 h1 {
     text-align: center;
+    font-size: 2.5em;
+    color: #00abf0;  /* Bright blue for header */
+    margin-bottom: 30px;
 }
 
+/* Form Styles */
 form {
-    margin: 20px auto;
-    max-width: 400px;
-    background: #fff;
-    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1c2d3e;  /* Darker background for the form */
+    padding: 25px 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #00abf0;  /* Accent color for border */
+    padding-bottom: 5px;
 }
 
 form label {
-    display: block;
+    font-weight: bold;
     margin: 10px 0 5px;
+    display: block;
+    color: #00abf0;  /* Bright blue for labels */
 }
 
 form input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    font-size: 1em;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #444;  /* Slightly lighter border */
+    border-radius: 5px;
+    background-color: #1c2d3e;  /* Matching the form background */
+    color: #fff;  /* White text inside inputs */
+    transition: border 0.3s ease;
 }
 
+form input:focus {
+    border: 1px solid #00abf0;  /* Bright blue border on focus */
+    outline: none;
+    background-color: #26374c;  /* Slightly lighter background when focused */
+}
+
+/* Submit Button */
 button {
-    display: block;
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 12px 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: #081b29;  /* Dark color text */
+    background-color: #00abf0;  /* Bright blue background */
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background 0.5s ease, color 0.5s ease;  /* Smooth transition for background and text color */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #081b29;  /* Dark background on hover */
+    color: #00abf0;  /* Blue text on hover */
 }
 
+
+/* Result Section */
+#result {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1c2d3e;  /* Darker background for result section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
 table {
     width: 100%;
-    margin: 20px 0;
+    margin-top: 20px;
     border-collapse: collapse;
+    background: #1c2d3e;  /* Dark background for table */
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 table th, table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+    border: 1px solid #444;  /* Dark border color */
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 1em;
 }
 
 table th {
-    background-color: #f4f4f4;
+    background-color: #00abf0;  /* Bright blue background for table headers */
+    color: #fff;  /* White text in header */
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #26374c;  /* Slightly lighter background for even rows */
+}
+
+table tr:hover {
+    background-color: #3a4c64;  /* Darker hover effect for rows */
 }

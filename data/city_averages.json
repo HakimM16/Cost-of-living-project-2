@@ -1,38 +1,308 @@
 {
     "Paris": {
-        "rent": 1200,
-        "fitness": 50,
-        "food": 300,
-        "clothes": 150,
-        "transport": 100,
-        "debts": 200,
-        "luxuries": 200
+        "rent": 11472,
+        "fitness": 29,
+        "food": 294,
+        "clothes": 78,
+        "transport": 57,
+        "debts": 0,
+        "luxuries": 41
     },
     "Munich": {
-        "rent": 1000,
-        "fitness": 40,
+        "rent": 1560,
+        "fitness": 37,
         "food": 250,
-        "clothes": 120,
-        "transport": 90,
-        "debts": 180,
-        "luxuries": 180
+        "clothes": 77,
+        "transport": 44,
+        "debts": 0,
+        "luxuries": 38
     },
     "New York": {
-        "rent": 2000,
-        "fitness": 70,
-        "food": 400,
-        "clothes": 200,
-        "transport": 150,
-        "debts": 250,
-        "luxuries": 300
+        "rent": 3200,
+        "fitness": 80,
+        "food": 630,
+        "clothes": 150,
+        "transport": 110,
+        "debts": 0,
+        "luxuries": 400
     },
     "Tokyo": {
-        "rent": 1500,
+        "rent": 1173,
+        "fitness": 61,
+        "food": 374,
+        "clothes": 51,
+        "transport": 58,
+        "debts": 0,
+        "luxuries": 31
+    }, 
+    "London": {
+        "rent": 2500,
         "fitness": 60,
         "food": 350,
-        "clothes": 180,
+        "clothes": 150,
+        "transport": 150,
+        "debts": 0,
+        "luxuries": 400
+    },
+    "Dubai": {
+        "rent": 1600,
+        "fitness": 75,
+        "food": 400,
+        "clothes": 100,
+        "transport": 90,
+        "debts": 0,
+        "luxuries": 300
+    },
+    "Singapore": {
+        "rent": 1800,
+        "fitness": 100,
+        "food": 450,
+        "clothes": 120,
+        "transport": 90,
+        "debts": 0,
+        "luxuries": 350
+    },
+    "Los Angeles": {
+        "rent": 3200,
+        "fitness": 80,
+        "food": 630,
+        "clothes": 150,
+        "transport": 110,
+        "debts": 0,
+        "luxuries": 400
+    },
+    "Berlin": {
+        "rent": 1200,
+        "fitness": 40,
+        "food": 300,
+        "clothes": 100,
+        "transport": 85,
+        "debts": 0,
+        "luxuries": 250
+    },
+    "Hong Kong": {
+        "rent": 2800,
+        "fitness": 90,
+        "food": 600,
+        "clothes": 150,
         "transport": 120,
-        "debts": 220,
+        "debts": 0,
+        "luxuries": 350
+    },
+    "Sydney": {
+        "rent": 2500,
+        "fitness": 70,
+        "food": 500,
+        "clothes": 130,
+        "transport": 100,
+        "debts": 0,
+        "luxuries": 400
+    },
+    "Madrid": {
+        "rent": 1000,
+        "fitness": 35,
+        "food": 300,
+        "clothes": 100,
+        "transport": 60,
+        "debts": 0,
+        "luxuries": 250
+    },
+    "Rome": {
+        "rent": 900,
+        "fitness": 40,
+        "food": 350,
+        "clothes": 120,
+        "transport": 70,
+        "debts": 0,
+        "luxuries": 200
+    },
+    "Copenhagen": {
+        "rent": 1800,
+        "fitness": 50,
+        "food": 400,
+        "clothes": 120,
+        "transport": 100,
+        "debts": 0,
+        "luxuries": 300
+    },
+    "Seoul": {
+        "rent": 900,
+        "fitness": 60,
+        "food": 400,
+        "clothes": 100,
+        "transport": 60,
+        "debts": 0,
+        "luxuries": 250
+    },
+    "Zurich": {
+        "rent": 2200,
+        "fitness": 80,
+        "food": 450,
+        "clothes": 130,
+        "transport": 120,
+        "debts": 0,
+        "luxuries": 400
+    },
+    "Bangkok": {
+        "rent": 600,
+        "fitness": 30,
+        "food": 200,
+        "clothes": 70,
+        "transport": 40,
+        "debts": 0,
+        "luxuries": 150
+    },
+    "Vienna": {
+        "rent": 1100,
+        "fitness": 50,
+        "food": 350,
+        "clothes": 100,
+        "transport": 70,
+        "debts": 0,
+        "luxuries": 200
+    },
+    "Istanbul": {
+        "rent": 500,
+        "fitness": 20,
+        "food": 150,
+        "clothes": 50,
+        "transport": 30,
+        "debts": 0,
+        "luxuries": 100
+    },
+    "Stockholm": {
+        "rent": 1500,
+        "fitness": 60,
+        "food": 400,
+        "clothes": 120,
+        "transport": 90,
+        "debts": 0,
+        "luxuries": 250
+    },
+    "Toronto": {
+        "rent": 2000,
+        "fitness": 70,
+        "food": 450,
+        "clothes": 130,
+        "transport": 100,
+        "debts": 0,
+        "luxuries": 300
+    },
+    "Barcelona": {
+        "rent": 1100,
+        "fitness": 45,
+        "food": 300,
+        "clothes": 100,
+        "transport": 60,
+        "debts": 0,
+        "luxuries": 250
+    },
+    "Cape Town": {
+        "rent": 700,
+        "fitness": 30,
+        "food": 200,
+        "clothes": 70,
+        "transport": 40,
+        "debts": 0,
+        "luxuries": 150
+    },
+    "Rio de Janeiro": {
+        "rent": 600,
+        "fitness": 25,
+        "food": 150,
+        "clothes": 60,
+        "transport": 35,
+        "debts": 0,
+        "luxuries": 100
+    }, 
+    "San Francisco": {
+        "rent": 3200,
+        "fitness": 80,
+        "food": 800,
+        "clothes": 150,
+        "transport": 100,
+        "debts": 0,
+        "luxuries": 450
+    },
+    "Washington, D.C.": {
+        "rent": 3220,
+        "fitness": 70,
+        "food": 700,
+        "clothes": 150,
+        "transport": 130,
+        "debts": 0,
+        "luxuries": 300
+    },
+    "Boston": {
+        "rent": 3747,
+        "fitness": 80,
+        "food": 800,
+        "clothes": 120,
+        "transport": 90,
+        "debts": 0,
+        "luxuries": 350
+    },
+    "Seattle": {
+        "rent": 3031,
+        "fitness": 75,
+        "food": 650,
+        "clothes": 100,
+        "transport": 115,
+        "debts": 0,
+        "luxuries": 300
+    },
+    "San Diego": {
+        "rent": 3057,
+        "fitness": 65,
+        "food": 700,
+        "clothes": 130,
+        "transport": 100,
+        "debts": 0,
+        "luxuries": 350
+    },
+    "Miami": {
+        "rent": 3200,
+        "fitness": 60,
+        "food": 650,
+        "clothes": 120,
+        "transport": 120,
+        "debts": 0,
+        "luxuries": 400
+    },
+    "Chicago": {
+        "rent": 2300,
+        "fitness": 70,
+        "food": 600,
+        "clothes": 90,
+        "transport": 100,
+        "debts": 0,
+        "luxuries": 250
+    },
+    "Austin": {
+        "rent": 2500,
+        "fitness": 60,
+        "food": 600,
+        "clothes": 100,
+        "transport": 90,
+        "debts": 0,
+        "luxuries": 300
+    },
+    "Denver": {
+        "rent": 2500,
+        "fitness": 70,
+        "food": 650,
+        "clothes": 100,
+        "transport": 100,
+        "debts": 0,
+        "luxuries": 300
+    },
+    "Phoenix": {
+        "rent": 2200,
+        "fitness": 50,
+        "food": 600,
+        "clothes": 80,
+        "transport": 100,
+        "debts": 0,
         "luxuries": 250
     }
 }
