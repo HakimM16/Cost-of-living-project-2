@@ -37,7 +37,7 @@ def compare():
             "city2": city2,
             "expenses_city1": expenses_city1,
             "average_city2": city2_avg,
-            "totals (£)": {"city1": total_city1, "city2": total_city2},
+            "totals": {"city1": total_city1, "city2": total_city2},
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 400
