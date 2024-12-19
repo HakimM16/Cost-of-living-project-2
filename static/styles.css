@@ -7,8 +7,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #081b29;  /* Main dark blue */
-    color: #fff; /* Text color set to white for contrast */
+    background-color: #081b29;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Dropdown function */
@@ -16,103 +22,118 @@ body {
     position: absolute;
     background-color: #26374c;
     border: 1px solid #00abf0;
-    max-height: 150px;
+    max-height: 200px;
     overflow-y: auto;
     width: 100%;
     z-index: 1;
     display: none;
-  }
-  
-  .city-option {
-    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.city-option {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
     cursor: pointer;
-  }
-  
-  .city-option:hover {
+    transition: background 0.3s ease, padding 0.2s ease;
+}
+
+.city-option:hover {
     background-color: #00abf0;
-  }
-  
+    padding-left: 20px;
+}
+
+
 
 /* Header */
 h1 {
     text-align: center;
-    font-size: 2.5em;
-    color: #00abf0;  /* Bright blue for header */
+    font-size: 3em;
+    color: #00abf0;
     margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Form Styles */
 form {
     max-width: 600px;
     margin: 0 auto;
-    background: #1c2d3e;  /* Darker background for the form */
-    padding: 25px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #1c2d3e;
+    padding: 30px 35px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 form h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid #00abf0;  /* Accent color for border */
-    padding-bottom: 5px;
+    border-bottom: 3px solid #00abf0;
+    padding-bottom: 8px;
 }
 
 form label {
     font-weight: bold;
-    margin: 10px 0 5px;
+    margin: 12px 0 8px;
     display: block;
-    color: #00abf0;  /* Bright blue for labels */
+    color: #00abf0;
 }
 
 form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1em;
-    margin-bottom: 15px;
-    border: 1px solid #444;  /* Slightly lighter border */
+    margin-bottom: 20px;
+    border: 2px solid #444;
     border-radius: 5px;
-    background-color: #1c2d3e;  /* Matching the form background */
-    color: #fff;  /* White text inside inputs */
-    transition: border 0.3s ease;
+    background-color: #1c2d3e;
+    color: #fff;
+    transition: all 0.3s ease;
 }
 
 form input:focus {
-    border: 1px solid #00abf0;  /* Bright blue border on focus */
+    border: 2px solid #00abf0;
     outline: none;
-    background-color: #26374c;  /* Slightly lighter background when focused */
+    background-color: #26374c;
 }
 
 /* Submit Button */
 button {
     width: 100%;
-    padding: 12px 0;
-    font-size: 1em;
+    padding: 14px;
+    font-size: 1.2em;
     font-weight: bold;
-    color: #081b29;  /* Dark color text */
-    background-color: #00abf0;  /* Bright blue background */
+    color: #081b29;
+    background-color: #00abf0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.5s ease, color 0.5s ease;  /* Smooth transition for background and text color */
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 button:hover {
-    background-color: #081b29;  /* Dark background on hover */
-    color: #00abf0;  /* Blue text on hover */
+    background-color: #081b29;
+    color: #00abf0;
+    transform: scale(1.05);
 }
-
 
 /* Result Section */
 #result {
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #1c2d3e;  /* Darker background for result section */
+    margin: 30px auto;
+    padding: 25px;
+    background: #1c2d3e;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Table Styles */
@@ -120,28 +141,29 @@ table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    background: #1c2d3e;  /* Dark background for table */
+    background: #1c2d3e;
     border-radius: 8px;
     overflow: hidden;
 }
 
 table th, table td {
-    border: 1px solid #444;  /* Dark border color */
+    border: 1px solid #444;
     padding: 12px 15px;
     text-align: left;
     font-size: 1em;
 }
 
 table th {
-    background-color: #00abf0;  /* Bright blue background for table headers */
-    color: #fff;  /* White text in header */
+    background-color: #00abf0;
+    color: #fff;
     text-transform: uppercase;
 }
 
 table tr:nth-child(even) {
-    background-color: #26374c;  /* Slightly lighter background for even rows */
+    background-color: #26374c;
 }
 
 table tr:hover {
-    background-color: #3a4c64;  /* Darker hover effect for rows */
+    background-color: #3a4c64;
+    transition: background 0.3s ease;
 }
