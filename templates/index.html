@@ -52,34 +52,35 @@
         </div>
 
         <h2>Expenses for First City</h2>
-        <label for="rent">Rent:</label>
+        <label for="rent">Rent: <span class="tooltip" data-tooltip="Cost of your monthly accommodation."></span></label>
         <input type="number" id="rent" name="rent" placeholder="Enter your monthly rent amount" required>
 
-        <label for="utilities">Utilities:</label>
+        <label for="utilities">Utilities: <span class="tooltip" data-tooltip="Electricity, water, internet, and other household utilities."></span></label>
         <input type="number" id="utilities" name="utilities" placeholder="Enter monthly utility bills (e.g., water, electricity)" required>
 
-        <label for="fitness">Fitness:</label>
+        <label for="fitness">Fitness: <span class="tooltip" data-tooltip="Gym memberships or other fitness-related expenses."></span></label>
         <input type="number" id="fitness" name="fitness" placeholder="Enter monthly gym or fitness expenses" required>
 
-        <label for="food">Food:</label>
+        <label for="food">Food: <span class="tooltip" data-tooltip="Grocery bills or eating out expenses."></span></label>
         <input type="number" id="food" name="food" placeholder="Enter average monthly food expenses" required>
 
-        <label for="clothes">Clothes:</label>
+        <label for="clothes">Clothes: <span class="tooltip" data-tooltip="Clothing, shoes, and other wearable items."></span></label>
         <input type="number" id="clothes" name="clothes" placeholder="Enter estimated monthly clothing expenses" required>
 
-        <label for="transport">Transport:</label>
+        <label for="transport">Transport: <span class="tooltip" data-tooltip="Public transport, fuel, or car maintenance costs."></span></label>
         <input type="number" id="transport" name="transport" placeholder="Enter monthly transport or fuel costs" required>
 
-        <label for="debts">Debts:</label>
+        <label for="debts">Debts: <span class="tooltip" data-tooltip="Loan repayments, credit card payments, etc."></span></label>
         <input type="number" id="debts" name="debts" placeholder="Enter monthly debt repayment amount" required>
 
-        <label for="luxuries">Everyday Luxuries:</label>
+        <label for="luxuries">Everyday Luxuries: <span class="tooltip" data-tooltip="Non-essential items like entertainment or gadgets."></span></label>
         <input type="number" id="luxuries" name="luxuries" placeholder="Enter monthly spending on entertainment & extras" required>
 
         <button type="submit">Compare</button>
     </form>
     <div id="result"></div>
-
+    <canvas id="comparisonChart" width="600" height="400"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/static/script.js"></script>
 </body>
 </html>

@@ -45,8 +45,6 @@ body {
     padding-left: 20px;
 }
 
-
-
 /* Header */
 h1 {
     text-align: center;
@@ -104,6 +102,40 @@ form input:focus {
     border: 2px solid #00abf0;
     outline: none;
     background-color: #26374c;
+}
+
+/* Tooltip Style */
+.tooltip {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-left: 5px;
+    font-weight: normal;
+    color: #00abf0;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    width: max-content;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    z-index: 10;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Submit Button */
@@ -166,4 +198,55 @@ table tr:nth-child(even) {
 table tr:hover {
     background-color: #3a4c64;
     transition: background 0.3s ease;
+}
+
+/* Comparison Chart */
+#comparisonChart {
+    margin: 20px auto;
+    display: block;
+    max-width: 600px;
+}
+
+/* Weather Display */
+#weather {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #003f63, #005885);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+}
+
+#weather h3 {
+    text-align: center;
+    color: #FFD700; /* Gold for a vibrant highlight */
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#weather div {
+    text-align: center;
+    color: #E0F7FA; /* Light cyan for readability */
+    margin-top: 10px;
+}
+
+#weather div h4 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #FFFFFF; /* White for clear headings */
+}
+
+#weather div p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #B2EBF2; /* Softer cyan for description text */
+}
+
+#weather div img {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
