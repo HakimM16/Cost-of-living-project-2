@@ -27,5 +27,5 @@ This project is built using the following technologies:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cost-of-living-comparison.git
-   cd cost-of-living-comparison
+   git clone https://github.com/HakimM16/Cost-of-living-project-2.git
+   cd cost-of-living-project-2
