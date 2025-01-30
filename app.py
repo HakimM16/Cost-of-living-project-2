@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 import json
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
+API_KEY = os.getenv("WEATHER_API_KEY")
 
 app = Flask(__name__)
 
@@ -41,6 +45,12 @@ def compare():
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 400
+
+@app.route('/api/data', methods=['GET'])
+def get_api_data():
+    if not API_KEY:
+        return jsonify({"error": "API key is missing"}), 500
+    return jsonify({"apiKey": API_KEY})  # Return JSON with the API key
 
 if __name__ == "__main__":
     app.run(debug=True)

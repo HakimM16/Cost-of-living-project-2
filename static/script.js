@@ -93,16 +93,38 @@ expenseFields.forEach((field) => {
 calculateTotal();
 
 // Weather fetching function
-const apiKey = "99ff24c012144fb4582bdbb87e7f6612"; // Replace with your OpenWeatherMap API key
+fetch('/api/data')
+    .then(response => response.json())
+    .then(data => console.log(data)) // Handle the data
+    .catch(error => console.error('Error:', error));
+
 
 async function fetchWeather(city) {
   try {
+    // First, fetch the API key from the backend
+    const apiResponse = await fetch('/api/data');
+    
+    if (!apiResponse.ok) {
+      throw new Error(`API key fetch failed: ${apiResponse.statusText}`);
+    }
+
+    const apiData = await apiResponse.json();
+
+    if (!apiData.apiKey) {
+      throw new Error("API key is missing from server response");
+    }
+
+    const apiKey = apiData.apiKey; // Extract API key
+
+    // Now, fetch weather data using the API key
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
     );
+
     if (!response.ok) {
       throw new Error(`Error fetching weather for ${city}`);
     }
+
     const data = await response.json();
     return {
       temperature: data.main.temp,
@@ -110,10 +132,11 @@ async function fetchWeather(city) {
       icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`,
     };
   } catch (error) {
-    console.error(error);
+    console.error("Weather fetch error:", error);
     return null;
   }
 }
+    
 
 
 // Function to render the comparison chart
