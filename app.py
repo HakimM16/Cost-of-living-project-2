@@ -9,7 +9,7 @@ API_KEY = os.getenv("WEATHER_API_KEY")
 app = Flask(__name__)
 
 # Load JSON Data
-DATA_PATH = os.path.join(os.path.dirname(__file__), 'data', 'city_averages.json')
+DATA_PATH = os.path.join('data', 'city_averages.json')
 
 # Load the average costs when the app starts
 with open(DATA_PATH, 'r') as f:
