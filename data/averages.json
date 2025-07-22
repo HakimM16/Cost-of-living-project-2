@@ -1,0 +1,12 @@
+{
+  "New York": {
+    "rent": 3000,
+    "fitness": 80,
+    "food": 400,
+    "clothes": 150,
+    "transport": 130,
+    "debts": 400,
+    "luxuries": 200,
+    "utilities": 150
+  }
+}

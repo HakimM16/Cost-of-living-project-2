@@ -1,17 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 import json
 import os
+from data.AI import save_info_to_json
 
 API_KEY = os.getenv("WEATHER_API_KEY")
 
 app = Flask(__name__)
 
-# Load JSON Data
-DATA_PATH = os.path.join(os.path.dirname(__file__), 'data', 'city_averages.json')
-
-# Load the average costs when the app starts
-with open(DATA_PATH, 'r') as f:
-    AVERAGE_COSTS = json.load(f)
 
 @app.route('/')
 def index():
@@ -22,6 +17,18 @@ def compare():
     try:
         # Input data from user
         data = request.json
+
+        save_info_to_json(data['city2'])  # Save city2 info to JSON
+
+        # Load the average costs from the JSON file
+        DATA_PATH = os.path.join(os.path.dirname(__file__), 'data', 'averages.json')
+        if not os.path.exists(DATA_PATH):
+            return jsonify({"error": "Data file not found"}), 500
+
+        # Load the average costs when the app starts
+        with open(DATA_PATH, 'r') as f:
+            AVERAGE_COSTS = json.load(f)
+
         city1 = data['city1']
         city2 = data['city2']
         expenses_city1 = data['expenses_city1']
@@ -52,3 +59,5 @@ def get_api_data():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
