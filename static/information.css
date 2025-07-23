@@ -1,0 +1,97 @@
+#generateResponse {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #081b29 0%, #123a56 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(8, 27, 41, 0.3);
+    color: #e0eaf6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+#generateResponse h1 {
+    font-size: 2.2em;
+    text-align: center;
+    margin: 0 0 25px 0;
+    color: #38b6ff;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(8, 27, 41, 0.3);
+}
+
+#generateResponse h2 {
+    font-size: 1.4em;
+    color: #e0eaf6;
+    margin: 20px 0 12px 0;
+    font-weight: 600;
+    border-bottom: 2px solid #38b6ff;
+    padding-bottom: 5px;
+}
+
+#generateResponse p {
+    font-size: 0.95em;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+#generateResponse strong {
+    color: #38b6ff;
+    font-weight: 600;
+}
+
+/* Compact spacing for sections */
+#generateResponse .section {
+    margin-bottom: 18px;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+/* Style highlights and cost stats */
+#generateResponse .highlight {
+    background: rgba(56, 182, 255, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #e0eaf6;
+    font-weight: 600;
+}
+
+#generateResponse .cost-stat {
+    background: rgba(8, 27, 41, 0.2);
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-left: 4px solid #38b6ff;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9em;
+}
+
+#generateResponse .bottom-line {
+    background: rgba(8, 27, 41, 0.25);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    border: 1px solid rgba(56, 182, 255, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #generateResponse {
+        margin: 10px;
+        padding: 20px;
+        max-width: none;
+    }
+    
+    #generateResponse h1 {
+        font-size: 1.8em;
+    }
+    
+    #generateResponse h2 {
+        font-size: 1.2em;
+    }
+    
+    #generateResponse p {
+        font-size: 0.9em;
+    }
+}

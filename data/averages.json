@@ -1,12 +1,12 @@
 {
-  "London": {
-    "rent": 1500,
-    "fitness": 40,
-    "food": 300,
-    "clothes": 200,
-    "transport": 130,
-    "debts": 200,
-    "luxuries": 150,
+  "San Francisco": {
+    "rent": 3400,
+    "fitness": 60,
+    "food": 600,
+    "clothes": 150,
+    "transport": 70,
+    "debts": 300,
+    "luxuries": 200,
     "utilities": 150.0
   }
 }

@@ -1,4 +1,5 @@
 /* Dropdown Function */
+
 const input = document.getElementById("city2");
 const dropdown = document.getElementById("city2-list");
 
@@ -95,7 +96,7 @@ calculateTotal();
 // Weather fetching function
 fetch('/api/data')
     .then(response => response.json())
-    .then(data => console.log(data)) // Handle the data
+    .then(data => console.log("data")) // Handle the data
     .catch(error => console.error('Error:', error));
 
 
@@ -280,4 +281,29 @@ document.getElementById("comparisonForm").addEventListener("submit", async (even
   }
 });
 
+
+document.getElementById("comparisonForm").addEventListener("submit", async (event) => {
+  // Example function in script.js
+  async function getAIResponse(city1, city2) {
+      const response = await fetch('/generate-response', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ city1, city2 })
+      });
+      const result = await response.json();
+      if (result.response) {
+          document.getElementById('generateResponse').innerHTML = result.response;
+      } else {
+          document.getElementById('generateResponse').innerHTML = "Error: " + result.error;
+      }
+  }
+  event.preventDefault();
+
+  // Get the selected cities
+  const city1 = document.getElementById("city1").value;
+  const city2 = document.getElementById("city2").value;
+
+  // Call the AI response function
+  await getAIResponse(city1, city2);
+});
 

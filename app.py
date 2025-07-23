@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import json
 import os
 from data.AI import save_info_to_json
+from data.Info import generate_response_sync
 
 API_KEY = os.getenv("WEATHER_API_KEY")
 
@@ -56,6 +57,18 @@ def get_api_data():
     if not API_KEY:
         return jsonify({"error": "API key is missing"}), 500
     return jsonify({"apiKey": API_KEY})  # Return JSON with the API key
+
+@app.route('/generate-response', methods=['POST'])
+def generate_response():
+    try:
+        data = request.json
+        city1 = data.get('city1')
+        city2 = data.get('city2')
+        # Call your OpenAI function (make sure it returns a string or dict)
+        response = generate_response_sync(city1, city2)
+        return jsonify({"response": response})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
 
 if __name__ == "__main__":
     app.run(debug=True)
