@@ -3,8 +3,6 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import json
 import os
-#from AI import save_info_to_json
-#from Info import generate_response_sync
 
 def generate_city_info(city_name):
     """Generates a structured JSON response with average cost of living in a given city using OpenAI's API."""
