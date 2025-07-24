@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 import json
 import os
-from data.AI import save_info_to_json
-from data.Info import generate_response_sync
+from .data.AI import save_info_to_json
+from .data.Info import generate_response_sync
 
 API_KEY = os.getenv("WEATHER_API_KEY")
 
