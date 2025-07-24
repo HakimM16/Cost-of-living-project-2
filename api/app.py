@@ -37,9 +37,7 @@ def save_info_to_json(city_name):
     """ Save the generated city info to a JSON file. """
     city_info_str = generate_city_info(city_name)
     city_info = json.loads(city_info_str)  # Convert string to dict
-    with open("averages.json", "w") as json_file:
-        json.dump(city_info, json_file, indent=2)
-        json_file.close()
+    return city_info    
 
 def generate_response(city1, city2):
     """
@@ -198,29 +196,18 @@ def index():
 @app.route('/compare', methods=['POST'])
 def compare():
     try:
-        # Input data from user
         data = request.json
-
-        save_info_to_json(data['city2'])  # Save city2 info to JSON
-
-        # Load the average costs from the JSON file
-        DATA_PATH = os.path.join('averages.json')
-        if not os.path.exists(DATA_PATH):
-            return jsonify({"error": "Data file not found"}), 500
-
-        # Load the average costs when the app starts
-        with open(DATA_PATH, 'r') as f:
-            AVERAGE_COSTS = json.load(f)
-
+        
+        # Generate city2 info dynamically
+        city2_data = save_info_to_json(data['city2'])
+        
         city1 = data['city1']
         city2 = data['city2']
         expenses_city1 = data['expenses_city1']
-        total_income = data.get('total_income', None)
         
-        # Average costs for city 2
-        city2_avg = AVERAGE_COSTS.get(city2, {})
-
-        # Calculate total expenses
+        # Use the generated data instead of loading from file
+        city2_avg = city2_data.get(city2, {})
+        
         total_city1 = sum(expenses_city1.values())
         total_city2 = sum(city2_avg.values())
 
