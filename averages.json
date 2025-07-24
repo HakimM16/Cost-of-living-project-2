@@ -1,12 +1,12 @@
 {
-  "Hong Kong": {
-    "rent": 15000,
-    "fitness": 500,
-    "food": 4000,
-    "clothes": 1000,
-    "transport": 600,
-    "debts": 0,
-    "luxuries": 1500,
-    "utilities": 1200
+  "New York": {
+    "rent": 2800,
+    "fitness": 80,
+    "food": 500,
+    "clothes": 150,
+    "transport": 120,
+    "debts": 230,
+    "luxuries": 300,
+    "utilities": 145
   }
 }
