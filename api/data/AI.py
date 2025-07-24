@@ -34,7 +34,7 @@ def save_info_to_json(city_name):
     """ Save the generated city info to a JSON file. """
     city_info_str = generate_city_info(city_name)
     city_info = json.loads(city_info_str)  # Convert string to dict
-    with open("data/averages.json", "w") as json_file:
+    with open("averages.json", "w") as json_file:
         json.dump(city_info, json_file, indent=2)
         json_file.close()
 

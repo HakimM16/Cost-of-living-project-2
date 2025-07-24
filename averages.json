@@ -1,0 +1,12 @@
+{
+  "Madrid": {
+    "rent": 1200,
+    "fitness": 50,
+    "food": 300,
+    "clothes": 100,
+    "transport": 60,
+    "debts": 0,
+    "luxuries": 150,
+    "utilities": 200
+  }
+}

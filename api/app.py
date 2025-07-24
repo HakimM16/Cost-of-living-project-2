@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 import json
 import os
-from .data.AI import save_info_to_json
-from .data.Info import generate_response_sync
+from data.AI import save_info_to_json
+from data.Info import generate_response_sync
 
 API_KEY = os.getenv("WEATHER_API_KEY")
 
@@ -22,7 +22,7 @@ def compare():
         save_info_to_json(data['city2'])  # Save city2 info to JSON
 
         # Load the average costs from the JSON file
-        DATA_PATH = os.path.join(os.path.dirname(__file__), 'data', 'averages.json')
+        DATA_PATH = os.path.join('averages.json')
         if not os.path.exists(DATA_PATH):
             return jsonify({"error": "Data file not found"}), 500
 
