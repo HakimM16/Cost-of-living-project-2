@@ -1,12 +1,12 @@
 {
-  "Madrid": {
-    "rent": 1200,
-    "fitness": 50,
-    "food": 300,
-    "clothes": 100,
-    "transport": 60,
+  "Hong Kong": {
+    "rent": 15000,
+    "fitness": 500,
+    "food": 4000,
+    "clothes": 1000,
+    "transport": 600,
     "debts": 0,
-    "luxuries": 150,
-    "utilities": 200
+    "luxuries": 1500,
+    "utilities": 1200
   }
 }
